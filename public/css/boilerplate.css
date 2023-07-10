@@ -1,0 +1,100 @@
+html {
+  font-size: 75%;
+
+  @media screen and (width > 480px) {
+    font-size: 87.5%;
+  }
+  @media screen and (width > 768px) {
+    font-size: 100%;
+  }
+  @media screen and (width > 992px) {
+    font-size: 112.5%;
+  }
+  @media screen and (width > 1279px) {
+    font-size: 125%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+:root {
+  --base-fs: 1rem;
+  --base-padding: 0.5em;
+  --base-margin: 0.5em;
+  --base-br: 20px;
+  --base-gap: 0.5em;
+  --base-lh: 1.5;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-medium: calc(var(--fw-regular) + 100);
+  --fw-semi: calc(var(--fw-medium) + 100);
+  --fw-bold: calc(var(--fw-semi) + 100);
+
+  /* Font Stacks */
+  --fs-poppins: "Poppins", sans-serif;
+
+  /* Colors */
+  --body-bg: oklch(95% 0.05 260);
+
+  /* Table */
+  --table-bg: oklch(100% 0.01 260);
+  --table-header-bg: oklch(10% 0.05 260);
+}
+
+html,
+body {
+  block-size: 100%;
+}
+
+body {
+  font-size: var(--base-fs);
+  font-family: var(--fs-poppins);
+  font-weight: var(--fw-regular);
+  line-height: var(--base-lh);
+  background-color: var(--body-bg);
+}
+
+/* Typography */
+:where(h1, h2, h3, h4, h5, h6) {
+  color: var(--heading-color);
+
+  &:not(h5, h6) {
+    line-height: calc(var(--base-lh) * 0.7);
+  }
+}
+
+:where(p, li, a, label) {
+  font-size: calc(var(--base-fs) * 1.1);
+  color: var(--link-color);
+
+  &:not(a) {
+    color: var(--text-color);
+  }
+}
+
+span {
+  font-size: calc(var(--base-fs) * 0.9);
+  color: var(--text-color);
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+iframe,
+video,
+audio,
+img {
+  display: block;
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "username": "rahulbaran",
+    "email": "rahulkumar@gmail.com",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "username": "rohitkumar",
+    "email": "rohjitraj@gmail.com",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "username": "mamtadevi",
+    "email": "mamtabaran@gmail.com",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 4,
+    "username": "upendraji",
+    "email": "upendrabaran@gmail.com",
+    "gender": "male",
+    "status": "inactive"
+  },
+  {
+    "id": 5,
+    "username": "maltimandal",
+    "email": "maltimandal@yahoo.co",
+    "gender": "female",
+    "status": "active"
+  },
+  {
+    "id": 6,
+    "username": "shagunkr",
+    "email": "shagunkumari@gmail.com",
+    "status": "inactive",
+    "gender": "female"
+  },
+  {
+    "id": 7,
+    "username": "piyushagarwal",
+    "email": "kumarpiyush@gmail.com",
+    "status": "active",
+    "gender": "male"
+  },
+  {
+    "id": 8,
+    "username": "mohitpandey",
+    "email": "mohitdps@gmail.com",
+    "status": "active",
+    "gender": "male"
+  }
+]
