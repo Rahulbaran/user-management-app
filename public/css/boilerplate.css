@@ -44,11 +44,16 @@ html {
   --fs-poppins: "Poppins", sans-serif;
 
   /* Colors */
-  --body-bg: oklch(95% 0.05 260);
+  --body-bg: oklch(95% 0.05 280);
+  --text-color: oklch(50% 0.2 280);
+  --heading-color: oklch(20% 0.35 280);
+  --icon-color: oklch(30% 0.3 300);
 
   /* Table */
-  --table-bg: oklch(100% 0.01 260);
-  --table-header-bg: oklch(10% 0.05 260);
+  --table-bg: oklch(100% 0.01 280);
+  --table-header-bg: oklch(20% 0.1 280);
+  --table-data-border: oklch(95% 0.1 280);
+  --table-header-border: oklch(95% 0.05 280);
 }
 
 html,
