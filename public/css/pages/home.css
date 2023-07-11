@@ -9,25 +9,79 @@
   }
 }
 
-.table-section {
-  display: flex;
-  justify-content: center;
-}
-
 .table-container {
   block-size: 80vh;
   overflow: auto;
-  inline-size: min(90vw, 840px);
 }
 
 .table {
   border-collapse: collapse;
+  inline-size: min(90vw, 992px);
+  margin-inline: auto;
+  box-shadow: 5px 5px 25px oklch(10% 0.01 260 / 0.1);
 
   & thead {
     background-color: var(--table-header-bg);
   }
 
+  & th {
+    border: 1px solid var(--table-header-border);
+    font-weight: var(--fw-medium);
+    font-size: calc(var(--base-fs) * 1.15);
+  }
+
+  & td:not(.action) {
+    border: 1px solid var(--table-data-border);
+  }
+
+  & .action {
+    border-bottom: 1px solid var(--table-data-border);
+  }
+
   & tbody tr {
     background-color: var(--table-bg);
+  }
+}
+
+th,
+td {
+  color: var(--text-color);
+  padding: var(--base-padding) calc(var(--base-padding) * 1.5);
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--base-gap) * 2);
+
+  .update-btn svg,
+  .delete-btn svg {
+    width: 1.5em;
+    height: 1.25em;
+    stroke: var(--icon-color);
+    transition: opacity 100ms ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .update-btn {
+    font-size: var(--base-fs);
+    display: grid;
+    place-items: center;
+  }
+
+  .delete-btn {
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    background-color: none;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
