@@ -28,8 +28,16 @@ exports.getUser = async (req, res) => {
   const { id } = req.params;
 
   try {
+    const locals = {
+      title: "Update | User Management System",
+      description: "A simple system for managing users"
+    };
+    const css = {
+      filename: "update.css"
+    };
+
     const user = await User.findById(id);
-    res.status(200).json({ status: "success", results: { user } });
+    return res.render("pages/update", { locals, css, user });
   } catch (error) {
     return res.status(404).json({ status: "fail", message: error.message });
   }

@@ -1,0 +1,5 @@
+.main {
+  padding-block: calc(var(--base-padding) * 3);
+  display: grid;
+  justify-items: center;
+}

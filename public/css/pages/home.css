@@ -1,16 +1,9 @@
 .main {
   padding-block: calc(var(--base-padding) * 3);
-
-  & h1 {
-    text-align: center;
-    margin-block-end: calc(var(--base-margin) * 1.5);
-    text-decoration: underline 0.125em solid currentColor;
-    text-underline-offset: 3px;
-  }
 }
 
 .table-container {
-  block-size: 80vh;
+  block-size: 70dvh;
   overflow: auto;
 }
 

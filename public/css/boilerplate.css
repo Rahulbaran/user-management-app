@@ -46,6 +46,7 @@ html {
   /* Colors */
   --body-bg: oklch(95% 0.05 280);
   --text-color: oklch(50% 0.2 280);
+  --link-color: oklch(40% 0.2 280);
   --heading-color: oklch(20% 0.35 280);
   --icon-color: oklch(30% 0.3 300);
 
@@ -54,6 +55,13 @@ html {
   --table-header-bg: oklch(20% 0.1 280);
   --table-data-border: oklch(95% 0.1 280);
   --table-header-border: oklch(95% 0.05 280);
+
+  /* Form */
+  --form-bg: oklch(100% 0.01 280);
+  --form-border: oklch(85% 0.15 280);
+
+  /* Buttons */
+  --btn-bg: oklch(80% 0.15 280);
 }
 
 html,
@@ -102,4 +110,53 @@ video,
 audio,
 img {
   display: block;
+}
+
+/* Common Styling */
+h1 {
+  text-align: center;
+  margin-block-end: calc(var(--base-margin) * 1.5);
+  text-decoration: underline 0.125em solid currentColor;
+  text-underline-offset: 3px;
+}
+
+.form-container {
+  background-color: var(--form-bg);
+  inline-size: min(90vw, 540px);
+  padding: calc(var(--base-padding) * 3);
+  box-shadow: 5px 5px 25px oklch(10% 0.01 260 / 0.1);
+  border: 1px solid var(--form-border);
+  border-radius: calc(var(--base-br) * 0.2);
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-block-end: calc(var(--base-margin) * 1.5);
+
+    & label {
+      color: var(--link-color);
+      font-weight: var(--fw-medium);
+    }
+
+    & input {
+      padding: var(--base-padding);
+      font-family: inherit;
+      font-size: calc(var(--base-fs) * 1.05);
+      border: 1px solid var(--form-border);
+      color: var(--text-color);
+    }
+  }
+
+  & [type="submit"] {
+    font-family: inherit;
+    font-size: calc(var(--base-fs) * 1.15);
+    font-weight: var(--fw-medium);
+    inline-size: 100%;
+    padding: calc(var(--base-padding) * 0.8) var(--base-padding);
+    margin-block-start: calc(var(--base-margin) * 2);
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: calc(var(--base-br) * 0.2);
+  }
 }
