@@ -61,7 +61,7 @@ html {
   --form-border: oklch(85% 0.15 280);
 
   /* Buttons */
-  --btn-bg: oklch(80% 0.15 280);
+  --btn-bg: oklch(75% 0.15 280);
 }
 
 html,
@@ -158,5 +158,10 @@ h1 {
     color: var(--text-color);
     border: none;
     border-radius: calc(var(--base-br) * 0.2);
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
   }
 }
